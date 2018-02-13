@@ -8,7 +8,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
 
         <Text>My name is {name}</Text>
-        <Text>Evam Jacobs</Text>
+        <Text>Evan Jacobs</Text>
         <Text>Open up App.js to start working on your app!</Text>
         <Text>Changes you make will automatically reload.</Text>
         <Text>Shake your phone to open the developer menu.</Text>
