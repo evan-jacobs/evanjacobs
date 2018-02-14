@@ -20,7 +20,7 @@ export default class App extends React.Component {
         <Text style={{
           fontFamily: 'Hiragino Sans',
           fontWeight: 'bold',
-          fontSize: 15}}>is a music and producer, singer, actor,</Text>
+          fontSize: 15}}>is a music producer, singer, actor,</Text>
         <Text style={{
           fontFamily: 'Hiragino Sans',
           fontWeight: 'bold',
