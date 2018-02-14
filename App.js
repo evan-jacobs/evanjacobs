@@ -1,27 +1,67 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
+import FoundAndLostComponent from './FoundAndLostComponent.js';
+import FleauxzanguiComponent from './FleauxzanguiComponent.js';
 
-const name = 'test';
+/* Introduction Component */
+
+const fullName = 'Evan Jacobs';
+const name = 'Evan';
+
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-
-        <Text>My name is {name}</Text>
-        <Text>Evan Jacobs</Text>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
+      <ScrollView contentContainerStyle={styles.container}>
+        <Text style={{
+          fontFamily: 'Hiragino Sans',
+          fontWeight: 'bold',
+          fontSize: 40,
+          padding: 20}}>{fullName}</Text>
+        <Text style={{
+          fontFamily: 'Hiragino Sans',
+          fontWeight: 'bold',
+          fontSize: 15}}>is a music and producer, singer, actor,</Text>
+        <Text style={{
+          fontFamily: 'Hiragino Sans',
+          fontWeight: 'bold',
+          fontSize: 15}}>and aspiring developer</Text>
+        <Text style={{
+          fontFamily: 'Hiragino Sans',
+          fontWeight: 'bold',
+          fontSize: 15}}>from Reno, Nevada.</Text>
+        <Text style={{
+          fontFamily: 'Hiragino Sans',
+          fontWeight: 'bold',
+          fontSize: 15}}>Scroll down to view some projects.</Text>
+        <FoundAndLostComponent></FoundAndLostComponent>
+        <FleauxzanguiComponent></FleauxzanguiComponent>
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: 'column',
+    backgroundColor: 'powderblue',
     alignItems: 'center',
     justifyContent: 'center',
   },
+
 });
+
+/* nameFont: {
+  fontFamily: 'Hiragino Sans',
+  fontWeight: 'bold',
+  nameFontSize: 40
+};
+
+textFont: {
+    fontFamily: 'Hiragino Sans',
+    fontWeight: 'bold',
+    nameFontSize: 15
+}; */
+
+//////////////////////////////////////////////
+
+/* 2015 Component */
