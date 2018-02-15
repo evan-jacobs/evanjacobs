@@ -1,16 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, ScrollView, View, Image } from 'react-native';
 import { nameFont, textFont } from './App.js';
 /* Variables */
 
-const year = '2015:';
+const year = '- 2015 -';
 const foundAndLostImageStyle = StyleSheet.create({
   stretch: {
     width: 320,
     height: 320
   }
 });
-
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5
+  }
+});
 
 /* Found and Lost Component */
 
@@ -24,20 +32,14 @@ export default class FoundAndLost extends React.Component {
         <Text style={textFont.fontStyle}>(ft. Evan Jacobs) by Vybsz</Text>
         <Text style={textFont.fontStyle}>and also co-produced and starred in</Text>
         <Text style={textFont.fontStyle}>the accompanying music video.</Text>
+        <Text style={textFont.fontStyle}></Text>
+        <Text style={textFont.fontStyle}></Text>
         <Image
           style={foundAndLostImageStyle.stretch}
-          source={require('./found-and-lost-music-video-shoot-day-1.png')}/>
+          source={require('./FoundAndLost.jpg')}/>
+        <Text style={textFont.fontStyle}></Text>
+        <Text style={textFont.fontStyle}></Text>
       </View>
     );
   }
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    backgroundColor: 'powderblue',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 5
-  }
-});

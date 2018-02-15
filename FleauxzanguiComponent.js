@@ -4,11 +4,20 @@ import { nameFont, textFont } from './App.js';
 
 /* Variables */
 
-const year = '2016:';
+const year = '- 2016 -';
 const fleauxzanguiImageStyle = StyleSheet.create({
   stretch: {
     width: 320,
     height: 320
+  }
+});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    backgroundColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 5
   }
 });
 
@@ -24,20 +33,14 @@ export default class FleauxzanguiComponent extends React.Component {
         <Text style={textFont.fontStyle}>by Big Chocolate, which has gone on</Text>
         <Text style={textFont.fontStyle}>to be played extensively in various</Text>
         <Text style={textFont.fontStyle}>venues throughout the United States.</Text>
+        <Text style={textFont.fontStyle}></Text>
+        <Text style={textFont.fontStyle}></Text>
         <Image
           style={fleauxzanguiImageStyle.stretch}
           source={require('./botb-inverted_preview.jpeg')}/>
+        <Text style={textFont.fontStyle}></Text>
+        <Text style={textFont.fontStyle}></Text>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    backgroundColor: 'powderblue',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 5
-  }
-});
