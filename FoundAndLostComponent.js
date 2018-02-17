@@ -1,23 +1,34 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, ScrollView, View, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, ScrollView, View, Image, WebView, Dimensions } from 'react-native';
 import { nameFont, textFont } from './App.js';
 /* Variables */
 
 const year = '- 2015 -';
-const foundAndLostImageStyle = StyleSheet.create({
-  stretch: {
-    width: 320,
-    height: 320
-  }
-});
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 5
+    padding: 5,
+    height: 600
+  },
+
+  headerBarRow: {
+    flexDirection:'row',
+    padding: 8,
+  },
+
+  videoWeb: {
+    flex: 0,
+    alignItems: 'center',
+    backgroundColor: 'black',
+    justifyContent: 'center',
+    height: 320,
+    width: Dimensions.get('window').width,
   }
+
 });
 
 /* Found and Lost Component */
@@ -34,9 +45,15 @@ export default class FoundAndLost extends React.Component {
         <Text style={textFont.fontStyle}>the accompanying music video.</Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
-        <Image
-          style={foundAndLostImageStyle.stretch}
-          source={require('./FoundAndLost.jpg')}/>
+        <WebView
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          style={styles.videoWeb}
+          decelerationRate="normal"
+          startInLoadingState={true}
+          scalesPageToFit={true}
+          source={{uri: 'https://player.vimeo.com/video/134502457'}}
+        />
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
       </View>

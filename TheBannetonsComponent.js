@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions } from 'react-native';
 import { nameFont, textFont } from './App.js';
 
 /* Variables */
@@ -17,6 +17,27 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
+    justifyContent: 'flex-end',
+    padding: 5,
+    paddingTop: 10,
+    height: 600,
+
+
+  },
+
+  headerBarRow: {
+    flexDirection:'row',
+    padding: 8,
+  },
+
+  videoWeb: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'black',
+    justifyContent: 'flex-end',
+    height: 320,
+    width: Dimensions.get('window').width,
     padding: 5
   }
 });
@@ -30,12 +51,17 @@ export default class TheBannetonsComponent extends React.Component {
         <Text style={nameFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan produced the album</Text>
         <Text style={textFont.fontStyle}>Fire Hydrant Hissing Cat Repeater</Text>
-        <Text style={textFont.fontStyle}>Songs by The Bannetons</Text>
+        <Text style={textFont.fontStyle}>Songs by The Bannetons.</Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
-        <Image
-          style={theBannetonsImageStyle.stretch}
-          source={require('./TheBannetons.jpg')}/>
+        <WebView
+          javaScriptEnabled={true}
+          domStorageEnabled={true}
+          style={styles.videoWeb}
+          startInLoadingState={true}
+          scalesPageToFit={true}
+          source={{uri: 'https://open.spotify.com/embed/album/1NPTBBuAJkqgrcZC0Ps6KZ'}}
+        />
       </View>
     );
   }

@@ -32,13 +32,15 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 10
   },
 });
 const evanJacobsImageStyle = StyleSheet.create({
   stretch: {
     width: 320,
-    height: 320}
+    height: 320
+  }
 });
 
 /* Introduction Component */
