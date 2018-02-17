@@ -33,13 +33,31 @@ const styles = StyleSheet.create({
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    paddingTop: 10
+    paddingTop: 10,
+    paddingBottom:20
   },
 });
 const evanJacobsImageStyle = StyleSheet.create({
   stretch: {
     width: 320,
-    height: 320
+    height: 320,
+    borderRadius: 20
+  }
+});
+
+const stickyHeader = StyleSheet.create({
+  container: {
+    marginTop: 20,
+    fontFamily: 'Hiragino Sans',
+    fontWeight: 'bold',
+    fontSize: 40,
+    padding: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: 'ivory',
+    backgroundColor: 'cornflowerblue',
+    textAlign: 'center',
+
   }
 });
 
@@ -48,25 +66,26 @@ const evanJacobsImageStyle = StyleSheet.create({
 export default class App extends React.Component {
   render() {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
-        <Text style={textFont.fontStyle}></Text>
-        <Text style={textFont.fontStyle}></Text>
-        <Text style={nameFont.fontStyle}>{fullName}</Text>
-        <Image
-          style={evanJacobsImageStyle.stretch}
-          source={require('./EvanJacobs.jpg')}/>
-        <Text style={textFont.fontStyle}></Text>
-        <Text style={textFont.fontStyle}></Text>
-        <Text style={textFont.fontStyle}>Evan is a music producer, singer,</Text>
-        <Text style={textFont.fontStyle}>actor, and aspiring developer</Text>
-        <Text style={textFont.fontStyle}>from Reno, Nevada.</Text>
-        <Text style={textFont.fontStyle}>Scroll down to view some projects.</Text>
-        <Text style={textFont.fontStyle}></Text>
-        <Text style={textFont.fontStyle}></Text>
-        <FoundAndLostComponent></FoundAndLostComponent>
-        <FleauxzanguiComponent></FleauxzanguiComponent>
-        <TheBannetonsComponent></TheBannetonsComponent>
-      </ScrollView>
+      <View>
+        <Text style={stickyHeader.container}>{fullName}</Text>
+        <ScrollView contentContainerStyle={styles.container}>
+          <Text style={textFont.fontStyle}></Text>
+          <Text style={textFont.fontStyle}></Text>
+          <Image
+            style={evanJacobsImageStyle.stretch}
+            source={require('./EvanJacobs.jpg')}/>
+          <Text style={textFont.fontStyle}></Text>
+          <Text style={textFont.fontStyle}></Text>
+          <Text style={textFont.fontStyle}>Evan is a music producer, singer,</Text>
+          <Text style={textFont.fontStyle}>actor, and aspiring developer</Text>
+          <Text style={textFont.fontStyle}>from Reno, Nevada.</Text>
+          <Text style={textFont.fontStyle}>Scroll down to view some projects.</Text>
+          <Text style={textFont.fontStyle}></Text>
+          <FoundAndLostComponent></FoundAndLostComponent>
+          <FleauxzanguiComponent></FleauxzanguiComponent>
+          <TheBannetonsComponent></TheBannetonsComponent>
+        </ScrollView>
+      </View>
     );
   }
 }

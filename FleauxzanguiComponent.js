@@ -5,7 +5,6 @@ import { nameFont, textFont } from './App.js';
 /* Variables */
 
 const year = '- 2016 -';
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',

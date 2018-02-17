@@ -5,24 +5,15 @@ import { nameFont, textFont } from './App.js';
 /* Variables */
 
 const year = '- 2017 -';
-const theBannetonsImageStyle = StyleSheet.create({
-  stretch: {
-    width: 320,
-    height: 320
-  }
-});
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-    justifyContent: 'flex-end',
-    padding: 5,
-    paddingTop: 10,
-    height: 600,
-
-
+    paddingBottom: 20,
+    height: 950,
+    flexGrow: 1
   },
 
   headerBarRow: {

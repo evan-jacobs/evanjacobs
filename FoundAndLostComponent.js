@@ -4,7 +4,6 @@ import { nameFont, textFont } from './App.js';
 /* Variables */
 
 const year = '- 2015 -';
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -12,7 +11,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 5,
-    height: 600
+    height: 420
   },
 
   headerBarRow: {
@@ -25,8 +24,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'black',
     justifyContent: 'center',
-    height: 320,
+    height: 180,
     width: Dimensions.get('window').width,
+    borderRadius: 40
   }
 
 });
