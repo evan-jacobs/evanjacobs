@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, Linking, TouchableHighlight } from 'react-native';
 import FoundAndLostComponent from './FoundAndLostComponent.js';
 import FleauxzanguiComponent from './FleauxzanguiComponent.js';
 import TheBannetonsComponent from './TheBannetonsComponent.js';
+import { stickyFooter } from './StickyFooterComponent.js';
 
 /* Variables */
 
@@ -27,6 +28,7 @@ const textFont = StyleSheet.create({
     color: 'white'
   }
 });
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
@@ -56,8 +58,7 @@ const stickyHeader = StyleSheet.create({
     justifyContent: 'center',
     color: 'ivory',
     backgroundColor: 'cornflowerblue',
-    textAlign: 'center',
-
+    textAlign: 'center'
   }
 });
 
@@ -66,7 +67,7 @@ const stickyHeader = StyleSheet.create({
 export default class App extends React.Component {
   render() {
     return (
-      <View>
+      <View style={{flex: 1}}>
         <Text style={stickyHeader.container}>{fullName}</Text>
         <ScrollView contentContainerStyle={styles.container}>
           <Text style={textFont.fontStyle}></Text>
@@ -85,6 +86,20 @@ export default class App extends React.Component {
           <FleauxzanguiComponent></FleauxzanguiComponent>
           <TheBannetonsComponent></TheBannetonsComponent>
         </ScrollView>
+        <View style={stickyFooter.container}>
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.instagram.com/evanjacobs_/')}>
+            <Image source={require('./instagramicon.png')} style={{height:40, width:40}} />
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => Linking.openURL('https://www.facebook.com/evanjacobs.fx')}>
+            <Image source={require('./facebookicon.png')} style={{height:40, width:40}} />
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => Linking.openURL('https://soundcloud.com/evanjacobsmusic')}>
+            <Image source={require('./soundcloudicon.png')} style={{height:40, width:40}} />
+          </TouchableHighlight>
+          <TouchableHighlight onPress={() => Linking.openURL('https://github.com/evan-jacobs')}>
+            <Image source={require('./githubicon.png')} style={{height:40, width:40}} />
+          </TouchableHighlight>
+        </View>
       </View>
     );
   }

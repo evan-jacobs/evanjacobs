@@ -42,7 +42,9 @@ export default class TheBannetonsComponent extends React.Component {
         <Text style={nameFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan produced the album</Text>
         <Text style={textFont.fontStyle}>Fire Hydrant Hissing Cat Repeater</Text>
-        <Text style={textFont.fontStyle}>Songs by The Bannetons.</Text>
+        <Text style={textFont.fontStyle}>Songs by
+          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('http://laxaltandmciver.co/bannetons/')}> The Bannetons.</Text>
+        </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
         <WebView
