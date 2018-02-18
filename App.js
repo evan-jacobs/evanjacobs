@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View, Image, Linking, TouchableHighlight } from 'react-native';
+import { stickyFooter } from './StickyFooterComponent.js';
+import { stickyHeader } from './StickyHeaderComponent.js';
 import FoundAndLostComponent from './FoundAndLostComponent.js';
 import FleauxzanguiComponent from './FleauxzanguiComponent.js';
 import TheBannetonsComponent from './TheBannetonsComponent.js';
-import { stickyFooter } from './StickyFooterComponent.js';
-import { stickyHeader } from './StickyHeaderComponent.js';
+import SwiperComponent from './ImageSwiperComponent.js';
 
 /* Variables */
 
@@ -59,13 +60,7 @@ export default class App extends React.Component {
       <View style={{flex: 1}}>
         <Text style={stickyHeader.container}>{fullName}</Text>
         <ScrollView contentContainerStyle={styles.container}>
-          <Text style={textFont.fontStyle}></Text>
-          <Text style={textFont.fontStyle}></Text>
-          <Image
-            style={evanJacobsImageStyle.stretch}
-            source={require('./EvanJacobs.jpg')}/>
-          <Text style={textFont.fontStyle}></Text>
-          <Text style={textFont.fontStyle}></Text>
+          <SwiperComponent></SwiperComponent>
           <Text style={textFont.fontStyle}>Evan is a music producer, singer, actor, and aspiring developer from Reno, Nevada. Scroll down to view some of his projects. </Text>
           <FoundAndLostComponent></FoundAndLostComponent>
           <FleauxzanguiComponent></FleauxzanguiComponent>
@@ -90,4 +85,4 @@ export default class App extends React.Component {
   }
 }
 
-export { nameFont, textFont };
+export { nameFont, textFont, evanJacobsImageStyle };
