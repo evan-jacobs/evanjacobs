@@ -43,11 +43,11 @@ export default class FoundAndLost extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={nameFont.fontStyle}>{year}</Text>
-        <Text style={textFont.fontStyle}>Evan co-produced and sang on the</Text>
-        <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://soundcloud.com/vybsz/vybsz-found-and-lost-ft-evan-jacobs')}>track "Found and Lost"</Text>
-        <Text style={textFont.fontStyle}>(ft. Evan Jacobs) by Vybsz</Text>
-        <Text style={textFont.fontStyle}>and also co-produced and starred in</Text>
-        <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://vimeo.com/134502457')}>the accompanying music video.</Text>
+        <Text style={textFont.fontStyle}>Evan co-produced and sang on the track
+          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://soundcloud.com/vybsz/vybsz-found-and-lost-ft-evan-jacobs')}> Found and Lost (ft. Evan Jacobs) by Vybsz </Text>
+          <Text style={textFont.fontStyle}>and also co-produced and starred in </Text>
+          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://vimeo.com/134502457')}>the accompanying music video.</Text>
+        </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
         <WebView

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions, Linking } from 'react-native';
 import { nameFont, textFont } from './App.js';
 
 /* Variables */
@@ -40,10 +40,8 @@ export default class TheBannetonsComponent extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={nameFont.fontStyle}>{year}</Text>
-        <Text style={textFont.fontStyle}>Evan produced the album</Text>
-        <Text style={textFont.fontStyle}>Fire Hydrant Hissing Cat Repeater</Text>
-        <Text style={textFont.fontStyle}>Songs by
-          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('http://laxaltandmciver.co/bannetons/')}> The Bannetons.</Text>
+        <Text style={textFont.fontStyle}>Evan produced the album
+          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('http://laxaltandmciver.co/bannetons/')}> Fire Hydrant Hissing Cat Repeater Songs by The Bannetons.</Text>
         </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>

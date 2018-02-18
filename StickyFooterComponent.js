@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, ScrollView, View, Image, Linking } from 'react-native';
 
+/* Variables */
+
 const stickyFooter = StyleSheet.create({
   container: {
-    height: 40,
+    height: 41,
     flexDirection: 'row',
     alignItems: 'center',
     alignItems: 'flex-end',
@@ -12,6 +14,8 @@ const stickyFooter = StyleSheet.create({
     backgroundColor: 'cornflowerblue'
   }
 });
+
+/* Sticky Footer Component */
 
 export default class StickyFooter extends React.Component {
   render() {

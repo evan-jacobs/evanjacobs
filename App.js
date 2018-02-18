@@ -4,6 +4,7 @@ import FoundAndLostComponent from './FoundAndLostComponent.js';
 import FleauxzanguiComponent from './FleauxzanguiComponent.js';
 import TheBannetonsComponent from './TheBannetonsComponent.js';
 import { stickyFooter } from './StickyFooterComponent.js';
+import { stickyHeader } from './StickyHeaderComponent.js';
 
 /* Variables */
 
@@ -14,8 +15,9 @@ const nameFont = StyleSheet.create({
     fontFamily: 'Hiragino Sans',
     fontWeight: 'bold',
     fontSize: 40,
-    padding: 20,
+    padding: 10,
     alignItems: 'center',
+    textAlign: 'center',
     justifyContent: 'center',
     color: 'darkgrey'
   }
@@ -25,7 +27,11 @@ const textFont = StyleSheet.create({
     fontFamily: 'Hiragino Sans',
     fontWeight: 'bold',
     fontSize: 15,
-    color: 'white'
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    color: 'white',
+    padding: 1
   }
 });
 
@@ -34,9 +40,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingTop: 10,
-    paddingBottom:20
+    justifyContent: 'flex-start'
   },
 });
 const evanJacobsImageStyle = StyleSheet.create({
@@ -44,21 +48,6 @@ const evanJacobsImageStyle = StyleSheet.create({
     width: 320,
     height: 320,
     borderRadius: 20
-  }
-});
-
-const stickyHeader = StyleSheet.create({
-  container: {
-    marginTop: 20,
-    fontFamily: 'Hiragino Sans',
-    fontWeight: 'bold',
-    fontSize: 40,
-    padding: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'ivory',
-    backgroundColor: 'cornflowerblue',
-    textAlign: 'center'
   }
 });
 
@@ -77,11 +66,7 @@ export default class App extends React.Component {
             source={require('./EvanJacobs.jpg')}/>
           <Text style={textFont.fontStyle}></Text>
           <Text style={textFont.fontStyle}></Text>
-          <Text style={textFont.fontStyle}>Evan is a music producer, singer,</Text>
-          <Text style={textFont.fontStyle}>actor, and aspiring developer</Text>
-          <Text style={textFont.fontStyle}>from Reno, Nevada.</Text>
-          <Text style={textFont.fontStyle}>Scroll down to view some projects.</Text>
-          <Text style={textFont.fontStyle}></Text>
+          <Text style={textFont.fontStyle}>Evan is a music producer, singer, actor, and aspiring developer from Reno, Nevada. Scroll down to view some of his projects. </Text>
           <FoundAndLostComponent></FoundAndLostComponent>
           <FleauxzanguiComponent></FleauxzanguiComponent>
           <TheBannetonsComponent></TheBannetonsComponent>

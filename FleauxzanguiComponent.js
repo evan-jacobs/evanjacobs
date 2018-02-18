@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions } from 'react-native';
+import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions, Linking } from 'react-native';
 import { nameFont, textFont } from './App.js';
 
 /* Variables */
@@ -39,9 +39,9 @@ export default class FleauxzanguiComponent extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={nameFont.fontStyle}>{year}</Text>
-        <Text style={textFont.fontStyle}>Evan co-produced and sang on the</Text>
-        <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}>track "Fleauxzangui" (ft. Evan Jacobs)</Text>
-        <Text style={textFont.fontStyle}>by Big Chocolate.</Text>
+        <Text style={textFont.fontStyle}>Evan co-produced and sang on the track
+          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}> Fleauxzangui (ft. Evan Jacobs) by Big Chocolate</Text>
+        </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
         <WebView
