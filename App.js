@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, Linking, TouchableHighlight } from 'react-native';
-import { stickyFooter } from './StickyFooterComponent.js';
+import { StyleSheet, Text, ScrollView, View, Image, Linking, TouchableHighlight, TouchableOpacity } from 'react-native';
 import { stickyHeader } from './StickyHeaderComponent.js';
+import SwiperComponent from './ImageSwiperComponent.js';
 import FoundAndLostComponent from './FoundAndLostComponent.js';
 import FleauxzanguiComponent from './FleauxzanguiComponent.js';
 import TheBannetonsComponent from './TheBannetonsComponent.js';
-import SwiperComponent from './ImageSwiperComponent.js';
+import StickyFooterComponent from './StickyFooterComponent.js';
+import { stickyFooter } from './StickyFooterComponent.js';
 
 /* Variables */
 
@@ -20,7 +21,8 @@ const nameFont = StyleSheet.create({
     alignItems: 'center',
     textAlign: 'center',
     justifyContent: 'center',
-    color: 'darkgrey'
+    color: 'darkgrey',
+
   }
 });
 const textFont = StyleSheet.create({
@@ -58,28 +60,17 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <Text style={stickyHeader.container}>{fullName}</Text>
+        <TouchableOpacity onPress={()=>{alert("He's A Bad Motherfucker")}}>
+          <Text style={stickyHeader.container}>{fullName}</Text>
+        </TouchableOpacity>
         <ScrollView contentContainerStyle={styles.container}>
           <SwiperComponent></SwiperComponent>
-          <Text style={textFont.fontStyle}>Evan is a music producer, singer, actor, and aspiring developer from Reno, Nevada. Scroll down to view some of his projects. </Text>
+          <Text style={textFont.fontStyle}>Evan is a music producer, singer, actor, and aspiring developer from Reno, Nevada. Scroll down to view a few of his projects. </Text>
           <FoundAndLostComponent></FoundAndLostComponent>
           <FleauxzanguiComponent></FleauxzanguiComponent>
           <TheBannetonsComponent></TheBannetonsComponent>
         </ScrollView>
-        <View style={stickyFooter.container}>
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.instagram.com/evanjacobs_/')}>
-            <Image source={require('./instagramicon.png')} style={{height:40, width:40}} />
-          </TouchableHighlight>
-          <TouchableHighlight onPress={() => Linking.openURL('https://www.facebook.com/evanjacobs.fx')}>
-            <Image source={require('./facebookicon.png')} style={{height:40, width:40}} />
-          </TouchableHighlight>
-          <TouchableHighlight onPress={() => Linking.openURL('https://soundcloud.com/evanjacobsmusic')}>
-            <Image source={require('./soundcloudicon.png')} style={{height:40, width:40}} />
-          </TouchableHighlight>
-          <TouchableHighlight onPress={() => Linking.openURL('https://github.com/evan-jacobs')}>
-            <Image source={require('./githubicon.png')} style={{height:40, width:40}} />
-          </TouchableHighlight>
-        </View>
+        <StickyFooterComponent></StickyFooterComponent>
       </View>
     );
   }

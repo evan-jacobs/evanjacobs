@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
 import { evanJacobsImageStyle } from './App.js';
 import Swiper from 'react-native-swiper';
+import Lightbox from 'react-native-lightbox';
 
 const styles = StyleSheet.create({
   wrapper: {
@@ -49,29 +50,46 @@ export default class SwiperComponent extends Component {
     return (
       <Swiper style={styles.wrapper} showsButtons={true}>
         <View style={styles.slide1}>
-          <Image
-            style={evanJacobsImageStyle.stretch}
-            source={require('./EvanJacobs.jpg')}/>
+          <TouchableHighlight onLongPress={()=>{alert("Sophisticated As Fuck")}}>
+            <Image
+              style={evanJacobsImageStyle.stretch}
+              source={require('./EvanJacobs.jpg')}/>
+          </TouchableHighlight>
         </View>
         <View style={styles.slide2}>
-          <Image
-            style={evanJacobsImageStyle.stretch}
-            source={require('./EvanDriving.jpg')}/>
+          <TouchableHighlight onLongPress={()=>{alert("Driven As Fuck")}}>
+            <Image
+              style={evanJacobsImageStyle.stretch}
+              source={require('./EvanDriving.jpg')}/>
+          </TouchableHighlight>
         </View>
         <View style={styles.slide3}>
-          <Image
-            style={evanJacobsImageStyle.stretch}
-            source={require('./EvanFur.jpg')}/>
+          <TouchableHighlight onLongPress={()=>{alert("Furry As Fuck")}}>
+            <Image
+              style={evanJacobsImageStyle.stretch}
+              source={require('./EvanFur.jpg')}/>
+          </TouchableHighlight>
         </View>
         <View style={styles.slide4}>
-          <Image
-            style={evanJacobsImageStyle.stretch}
-            source={require('./EvanVictory.jpg')}/>
+          <TouchableHighlight onLongPress={()=>{alert("Victorious As Fuck")}}>
+            <Image
+              style={evanJacobsImageStyle.stretch}
+              source={require('./EvanVictory.jpg')}/>
+          </TouchableHighlight>
         </View>
         <View style={styles.slide5}>
-          <Image
-            style={evanJacobsImageStyle.stretch}
-            source={require('./EvanGreen.jpg')}/>
+          <TouchableHighlight onLongPress={()=>{alert("Musical As Fuck")}}>
+            <Image
+              style={evanJacobsImageStyle.stretch}
+              source={require('./EvanGuitar.jpg')}/>
+          </TouchableHighlight>
+        </View>
+        <View style={styles.slide6}>
+          <TouchableHighlight onLongPress={()=>{alert("Mysterious As Fuck")}}>
+            <Image
+              style={evanJacobsImageStyle.stretch}
+              source={require('./EvanGreen.jpg')}/>
+          </TouchableHighlight>
         </View>
       </Swiper>
     );

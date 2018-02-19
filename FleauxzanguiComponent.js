@@ -40,7 +40,7 @@ export default class FleauxzanguiComponent extends React.Component {
       <View style={styles.container}>
         <Text style={nameFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan co-produced and sang on the track
-          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'blue'}} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}> Fleauxzangui (ft. Evan Jacobs) by Big Chocolate</Text>
+          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'cornflowerblue'}} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}> Fleauxzangui (ft. Evan Jacobs) by Big Chocolate</Text>
         </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>

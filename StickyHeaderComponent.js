@@ -15,7 +15,10 @@ const stickyHeader = StyleSheet.create({
     color: 'ivory',
     backgroundColor: 'cornflowerblue',
     textAlign: 'center',
-    height: 60
+    height: 60,
+    textShadowColor: 'black',
+    textShadowOffset: {width: 2, height: 2},
+    textShadowRadius: 2
   }
 });
 
