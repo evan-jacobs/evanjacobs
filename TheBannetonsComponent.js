@@ -51,8 +51,7 @@ export default class TheBannetonsComponent extends React.Component {
           style={styles.videoWeb}
           startInLoadingState={true}
           scalesPageToFit={true}
-          source={{uri: 'https://open.spotify.com/embed/album/1NPTBBuAJkqgrcZC0Ps6KZ'}}
-        />
+          source={{uri: 'https://open.spotify.com/embed/album/1NPTBBuAJkqgrcZC0Ps6KZ'}} />
       </View>
     );
   }

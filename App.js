@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, ScrollView, Linking } from 'react-native';
+import { StyleSheet, View, Text, ScrollView } from 'react-native';
 import StickyHeaderComponent from './StickyHeaderComponent.js';
 import SwiperComponent from './ImageSwiperComponent.js';
 import IntroComponent from './IntroComponent.js';

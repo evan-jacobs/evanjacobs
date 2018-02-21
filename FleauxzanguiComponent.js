@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Text, ScrollView, Image, WebView, Dimensions, Linking } from 'react-native';
+import { StyleSheet, View, Text, WebView, Dimensions, Linking } from 'react-native';
 import { headLineFont, textFont, hyperLinkTextFont } from './TextConstants.js';
 
 // Variables //
