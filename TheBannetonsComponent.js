@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions, Linking } from 'react-native';
-import { nameFont, textFont } from './App.js';
+import { StyleSheet, View, Text, WebView, Dimensions, Linking } from 'react-native';
+import { headLineFont, textFont, hyperLinkTextFont } from './TextConstants.js';
 
-/* Variables */
+// Variables //
 
 const year = '- 2017 -';
 const styles = StyleSheet.create({
@@ -33,15 +33,15 @@ const styles = StyleSheet.create({
   }
 });
 
-/* The Bannetons Component */
+// The Bannetons Description & Spotify Audio Player Component //
 
 export default class TheBannetonsComponent extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={nameFont.fontStyle}>{year}</Text>
+        <Text style={headLineFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan produced the album
-          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'cornflowerblue'}} onPress={() => Linking.openURL('http://laxaltandmciver.co/bannetons/')}> Fire Hydrant Hissing Cat Repeater Songs by The Bannetons.</Text>
+          <Text style={hyperLinkTextFont.fontStyle} onPress={() => Linking.openURL('http://laxaltandmciver.co/bannetons/')}> Fire Hydrant Hissing Cat Repeater Songs by The Bannetons.</Text>
         </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
@@ -56,4 +56,4 @@ export default class TheBannetonsComponent extends React.Component {
       </View>
     );
   }
-}
+};

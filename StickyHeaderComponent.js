@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, Linking } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-/* Variables */
+// Variables //
 
+const fullName = 'Evan Jacobs';
 const stickyHeader = StyleSheet.create({
   container: {
-    marginTop: 20,
     fontFamily: 'Hiragino Sans',
     fontWeight: 'bold',
     fontSize: 40,
@@ -22,16 +22,16 @@ const stickyHeader = StyleSheet.create({
   }
 });
 
-/* Sticky Header Component */
+// Sticky Header Component //
 
 export default class StickyHeader extends React.Component {
   render() {
     return (
-      <View stlye={stickyHeader.container}>
-
-      </View>
+      <TouchableOpacity onPress={()=>{alert("He's A Bad Motherfucker")}}>
+        <View stlye={stickyHeader.container}>
+          <Text style={stickyHeader.container}>{fullName}</Text>
+        </View>
+      </TouchableOpacity>
     );
   }
-}
-
-export { stickyHeader };
+};

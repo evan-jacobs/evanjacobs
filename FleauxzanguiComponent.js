@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, WebView, Dimensions, Linking } from 'react-native';
-import { nameFont, textFont } from './App.js';
+import { StyleSheet, View, Text, ScrollView, Image, WebView, Dimensions, Linking } from 'react-native';
+import { headLineFont, textFont, hyperLinkTextFont } from './TextConstants.js';
 
-/* Variables */
+// Variables //
 
 const year = '- 2016 -';
 const styles = StyleSheet.create({
@@ -32,15 +32,15 @@ const styles = StyleSheet.create({
   }
 });
 
-/* Fleauxzangui Component */
+// Fleauxzangui Description & SoundCloud Audio Player Component //
 
 export default class FleauxzanguiComponent extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={nameFont.fontStyle}>{year}</Text>
+        <Text style={headLineFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan co-produced and sang on the track
-          <Text style={{fontFamily: 'Hiragino Sans', fontWeight: 'bold', fontSize: 15, color: 'cornflowerblue'}} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}> Fleauxzangui (ft. Evan Jacobs) by Big Chocolate</Text>
+          <Text style={hyperLinkTextFont.fontStyle} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}> Fleauxzangui (ft. Evan Jacobs) by Big Chocolate</Text>
         </Text>
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
@@ -50,11 +50,10 @@ export default class FleauxzanguiComponent extends React.Component {
           style={styles.videoWeb}
           startInLoadingState={true}
           scalesPageToFit={true}
-          source={{uri: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300770769&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true'}}
-        />
+          source={{uri: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/300770769&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true'}} />
         <Text style={textFont.fontStyle}></Text>
         <Text style={textFont.fontStyle}></Text>
       </View>
     );
   }
-}
+};

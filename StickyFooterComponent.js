@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView, View, Image, Linking, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Image, Linking, TouchableOpacity } from 'react-native';
 
-/* Variables */
+// Variables //
 
 const stickyFooter = StyleSheet.create({
   container: {
@@ -14,28 +14,33 @@ const stickyFooter = StyleSheet.create({
     backgroundColor: 'cornflowerblue'
   }
 });
+const iconStyle = StyleSheet.create({
+  style: {
+    height:40,
+    width:40,
+    bottom: 2
+  }
+});
 
-/* Sticky Footer Component */
+// Sticky Footer Component //
 
 export default class StickyFooterComponent extends React.Component {
   render() {
     return (
       <View style={stickyFooter.container}>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.instagram.com/evanjacobs_/')}>
-          <Image source={require('./instagramicon.png')} style={{height:40, width:40, bottom: 2}}/>
+          <Image source={require('./instagramicon.png')} style={iconStyle.style}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/evanjacobs.fx')}>
-          <Image source={require('./facebookicon.png')} style={{height:40, width:40, bottom: 2}}/>
+          <Image source={require('./facebookicon.png')} style={iconStyle.style}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => Linking.openURL('https://soundcloud.com/evanjacobsmusic')}>
-          <Image source={require('./soundcloudicon.png')} style={{height:40, width:40, bottom: 2}}/>
+          <Image source={require('./soundcloudicon.png')} style={iconStyle.style}/>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => Linking.openURL('https://github.com/evan-jacobs')}>
-          <Image source={require('./githubicon.png')} style={{height:40, width:40, bottom: 2}}/>
+          <Image source={require('./githubicon.png')} style={iconStyle.style}/>
         </TouchableOpacity>
       </View>
     );
   }
 };
-
-export { stickyFooter };
