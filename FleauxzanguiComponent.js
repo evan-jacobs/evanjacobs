@@ -1,23 +1,17 @@
 import React from 'react';
 import { StyleSheet, View, Text, WebView, Dimensions, Linking } from 'react-native';
-import { headLineFont, textFont, hyperLinkTextFont } from './TextConstants.js';
+import { textFont, hyperLinkTextFont } from './TextConstants.js';
 
-// Variables //
+// Fleauxzangui Variables //
 
-const year = '- 2016 -';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 5,
-    height: 400
-  },
-
-  headerBarRow: {
-    flexDirection:'row',
-    padding: 8,
+    padding: 30,
+    height: 300
   },
 
   videoWeb: {
@@ -38,7 +32,6 @@ export default class FleauxzanguiComponent extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={headLineFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan co-produced and sang on the track
           <Text style={hyperLinkTextFont.fontStyle} onPress={() => Linking.openURL('https://soundcloud.com/big-chocolate/fleauxzangui')}> Fleauxzangui (ft. Evan Jacobs) by Big Chocolate</Text>
         </Text>

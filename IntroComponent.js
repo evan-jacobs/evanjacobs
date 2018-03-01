@@ -7,7 +7,7 @@ import { textFont } from './TextConstants.js';
 export default class IntroComponent extends Component {
   render() {
     return (
-      <View>
+      <View style={{paddingTop:10, paddingBottom: 23}}>
         <Text style={textFont.fontStyle}>Evan is a music producer,
         singer, actor, and aspiring developer from Reno, Nevada.
         Scroll down to view a few of his projects. </Text>

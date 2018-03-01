@@ -1,24 +1,19 @@
 import React from 'react';
 import { StyleSheet, View, Text, WebView, Dimensions, Linking } from 'react-native';
-import { headLineFont, textFont, hyperLinkTextFont } from './TextConstants.js';
+import { textFont, hyperLinkTextFont } from './TextConstants.js';
 
-// Variables //
+// The Bannetons Variables //
 
-const year = '- 2017 -';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 30,
     paddingBottom: 20,
-    height: 950,
+    height: 458,
     flexGrow: 1
-  },
-
-  headerBarRow: {
-    flexDirection:'row',
-    padding: 8,
   },
 
   videoWeb: {
@@ -39,7 +34,6 @@ export default class TheBannetonsComponent extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={headLineFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan produced the album
           <Text style={hyperLinkTextFont.fontStyle} onPress={() => Linking.openURL('http://laxaltandmciver.co/bannetons/')}> Fire Hydrant Hissing Cat Repeater Songs by The Bannetons.</Text>
         </Text>

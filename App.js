@@ -1,37 +1,22 @@
 import React from 'react';
-import { StyleSheet, View, Text, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import StickyHeaderComponent from './StickyHeaderComponent.js';
 import SwiperComponent from './ImageSwiperComponent.js';
 import IntroComponent from './IntroComponent.js';
-import FoundAndLostComponent from './FoundAndLostComponent.js';
-import FleauxzanguiComponent from './FleauxzanguiComponent.js';
-import TheBannetonsComponent from './TheBannetonsComponent.js';
+import { Tabs } from './TabNavigator.js';
 import StickyFooterComponent from './StickyFooterComponent.js';
 
-// Variables //
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'column',
-    backgroundColor: 'black',
-    alignItems: 'center',
-    justifyContent: 'flex-start'
-  },
-});
-
-// Main Application - Highest Order Component //
+// Main Application - Root Component //
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: 'black', marginTop: 20}}>
         <StickyHeaderComponent />
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView>
           <SwiperComponent />
           <IntroComponent />
-          <FoundAndLostComponent />
-          <FleauxzanguiComponent />
-          <TheBannetonsComponent />
+          <Tabs />
         </ScrollView>
         <StickyFooterComponent />
       </View>

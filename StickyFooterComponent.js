@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Image, Linking, TouchableOpacity } from 'react-native';
 
-// Variables //
+// Sticky Footer Variables //
 
 const stickyFooter = StyleSheet.create({
   container: {

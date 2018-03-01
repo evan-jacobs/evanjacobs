@@ -1,23 +1,17 @@
 import React from 'react';
 import { StyleSheet, View, Text, WebView, Dimensions, Linking } from 'react-native';
-import { headLineFont, textFont, hyperLinkTextFont } from './TextConstants.js';
+import { textFont, hyperLinkTextFont } from './TextConstants.js';
 
-// Variables //
+// Found And Lost Variables //
 
-const year = '- 2015 -';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     backgroundColor: 'black',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 5,
+    padding: 30,
     height: 420
-  },
-
-  headerBarRow: {
-    flexDirection:'row',
-    padding: 8,
   },
 
   videoWeb: {
@@ -38,7 +32,6 @@ export default class FoundAndLostComponent extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={headLineFont.fontStyle}>{year}</Text>
         <Text style={textFont.fontStyle}>Evan co-produced and sang on the track
           <Text style={hyperLinkTextFont.fontStyle}
                 onPress={() => Linking.openURL('https://soundcloud.com/vybsz/vybsz-found-and-lost-ft-evan-jacobs')}> Found and Lost (ft. Evan Jacobs) by Vybsz </Text>

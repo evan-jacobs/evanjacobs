@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-// Variables //
+// Sticky Header Variables //
 
 const fullName = 'Evan Jacobs';
 const stickyHeader = StyleSheet.create({
